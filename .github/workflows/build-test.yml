@@ -11,6 +11,8 @@ jobs:
     strategy:
       matrix:
         otp_version: [22, 21, 20, 19, 18]
+      fail-fast: false
+      max-parallel: 2
     
     container:
       image: erlang:${{ matrix.otp_version }}
